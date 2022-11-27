@@ -100,9 +100,5 @@ func Check_For_Spaces(query_string string) bool {
 		}
 	}
 
-	if len(query_string)-spaces < 3 {
-		return true
-	}
-
-	return false
+	return len(query_string)-spaces < 3
 }

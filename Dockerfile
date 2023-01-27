@@ -1,11 +1,11 @@
-FROM golang:1.16-alpine
+FROM golang
 
 WORKDIR /app
 
 COPY . .
 RUN go mod download
 
-RUN go build cmd/apiserver/main.go
+RUN go build src/cmd/apiserver/main.go
 
 EXPOSE 8080
 
